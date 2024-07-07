@@ -1,0 +1,343 @@
+:root{
+  --primary:#b6895b;
+  --bg:#010101;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  background-color: var(--bg);
+  font-family: 'Poppins' ,Times New Roman;
+  color: white;
+  min-height: 10000px;
+}
+/* style */
+
+/* navbar */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1,1,1,.8);
+  border-bottom:  1px solid #5e4328;
+  position:fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  z-index:9999999999;
+}
+
+.navbar .navbar-logo{
+  font-size: 2rem;
+  color: white;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span{
+  color:var(--primary);
+}
+
+.navbar .nav a{
+  color: white;
+  font-weight: 600;
+  font-size: 1.3rem;
+  display: inline-block;
+  margin: 0 1.3rem;
+}
+
+.navbar .nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .nav a::after{
+  content: ' ';
+  display: block;
+  padding-bottom: 0.45px;
+  border-bottom: 0.15rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.3s linear;
+}
+
+.navbar .nav a:hover::after{
+  transform: scaleX(0.6);
+}
+.navbar .navbar-extra a{
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.navbar .navbar-extra a:hover{
+  color:rgba(255,255,255,.6);
+}
+
+#menu {
+  display: none;
+}
+/* hero section */
+.hero{
+  min-height:100vh;
+  display: flex;
+  background-image: url('img/header-bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  position: relative;
+}
+
+.hero::after{
+  content: '';
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(0deg,rgba(1,1,2,1)7%,rgba(255,255,255,0)25%);
+  display: block;
+}
+.hero .content{
+  max-width: 46rem;
+  margin-left: 4rem;
+}
+.hero .content h1 {
+  font-size: 4.5rem;
+  text-transform: capitalize;
+  text-shadow: 1px 1px 3px rgba(1,1,3,.7);
+  line-height: 1.4;
+}
+.hero .content p{
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+}
+.hero .content span{
+  color:var(--primary);
+}
+
+.hero .content a{
+  color: white;
+  display: block;
+  width: 12rem;
+  height: 5rem;
+  margin-top: 2rem;
+  font-size: 1.8rem;
+  background-color: var(--primary);
+  border-radius: 1.2rem;
+  text-align: center;
+  line-height: 5rem;
+  box-shadow: 1px 1px 3px rgba(1,1,3,.5);
+}
+.hero .content a:hover{
+  background-color: black;
+  box-shadow: 3px 3px 6px rgba(1,1,3,.5);
+}
+/* about */
+.tentang,.menu,.contac{
+  padding: 7rem 2rem 2rem;
+}
+.tentang .tentang-judul, .menu .menu-judul,.contac h3{
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.tentang .tentang-judul span, .menu .menu-judul span,.contac h3 span{
+  color: var(--primary);
+}
+.tentang .row{
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+.tentang .about-img{
+  flex: 1 1 35rem;
+  border-radius:50% 50% 0 0;
+  overflow: hidden;
+  
+}
+.tentang .about-img img{
+  width: 100%;
+}
+.tentang .about-teks{
+  flex: 1 1 35rem;
+  padding: 0 2rem;
+}
+.tentang .about-teks h3{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.tentang .about-teks p{
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.menu .menu-deskripsi,.contac p{
+  max-width: 30rem;
+  text-align: center;
+  margin:auto;
+  margin-top:-3rem;
+  font-weight: 100;
+}
+
+.menu .row{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+ .menu-card .menu-card-img img{
+   width: 80%;
+   border-radius: 50%;
+ }
+ .menu-card{
+   text-align: center;
+   margin-bottom: 2.4rem;
+ }
+ 
+.menu-card .menu-card-title{
+  font-size: 1.6rem;
+  margin:1.4rem 0 0.3rem;
+}
+
+.menu-card .menu-card-price{
+  font-weight: 200;
+  font-size:1.4rem;
+}
+
+/* contac */
+.contac .row{
+  display:flex;
+  background-color: #242322;
+  margin-top: 3rem;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.contac .row .map{
+  flex:1 1 45rem;
+}
+
+.contac .row form{
+  flex:1 1 45rem;
+}
+
+.contac .contac-user{
+  margin-top: 0.8rem;
+  border: 1px solid rgba(255,255,255,.6);
+  padding: 0.3rem;
+  border-radius: 2rem;
+}
+.contac-user input{
+  background-color: rgba(8,8,8,0);
+  border:none;
+  font-size: 1.3rem;
+  color: white;
+  padding: .4rem;
+}
+
+form button{
+  padding: 1rem 3rem;
+  margin-top: 2rem;
+  background-color: var(--primary);
+  font-size: 1.6rem;
+  color: white;
+  border-radius: 2rem;
+  
+}
+
+footer{
+  background-color: var(--primary);
+  padding: 2rem 1.5rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.media-sosial a,.list-menu a, .copyright h3{
+  color: white;
+}
+
+.media-sosial ,.list-menu,.copyright{
+  margin: 1rem auto;
+}
+.list-menu a{
+  display: inline-block;
+  margin-right: 0.4rem;
+}
+
+
+/* Media query */
+
+/* Laptop */
+@media (max-width:1366px){
+  html{
+    font-size: 75%;
+  }
+}
+/* tablet */
+@media (max-width:768px){
+  html{
+    font-size: 62.5%;
+  }
+  
+  
+  .navbar .nav {
+    position: absolute;
+    background-color: #313131;
+    width: 30rem;
+    height: 100vh;
+    top:100%;
+    right: -100%;
+    transition: .4s ease-in ;
+  }
+  
+  .navbar .nav.active{
+    right: 0;
+  }
+  .navbar .nav a{
+    display: block;
+    color: rgba(255,255,255,.6);
+    font-size: 2rem;
+    text-align: center;
+    margin:1.8rem 0 ;
+  }
+  #menu{
+    display: inline-block;
+  }
+  
+  .tentang .row{
+    flex-wrap: wrap;
+  }
+  .tentang .row .about-img img{
+    height: 30rem;
+    object-fit: cover;
+    object-position: center;
+  margin-bottom: 3rem;
+  }
+  .tentang .row .about-teks {
+    padding: 0 1rem;
+  }
+  
+  .contac .row{
+    flex-wrap:wrap;
+  }
+  
+}
+/* handphone */
+@media (max-width:450px){
+  html{
+    font-size: 55%;
+  }
+}
+
+
+
+
